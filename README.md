@@ -1,5 +1,5 @@
 # Live Chat
 
-- [Based Heavily on This](https://chat.goinstant.com)
+- [Shamelessly and Lovingly Enhancing GoInstant <3](https://chat.goinstant.com)
 
-We're just experimenting and playing around :) Happy hacking!
+Just experimenting and playing around :) Happy hacking!

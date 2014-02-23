@@ -35,31 +35,28 @@ h1 {
 .input {
 	margin-top: 1em;
 	margin-top: 16px;
+	}
 	
-	&[type="text"] {
-		margin: 0;
-		padding: 11px;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		font-family: sans-serif;
-		font-size: .9em;
-	}
-
-	&[type="text"]:focus {
-		outline: 0;
-		border-color: #4FBA29;
-	}
-
-	&.name {
-		width: 150px;
-		margin-right: 8px;
-	}
-	&.text {
-		width: 437px;
-	}
+input[type="text"] {
+	margin: 0;
+	padding: 11px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
 }
 
+input[type="text"]:focus {
+	outline: 0;
+	background-color: hotpink;
+	color: white;
+}
 
+input.name {
+	width: 150px;
+	margin-right: 8px;
+}
+input.text {
+	width: 437px;
+}
 
 /* Messages list */
 .messages {

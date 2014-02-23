@@ -50,7 +50,7 @@ $(function() {
   });
 
   function randomColor() {
-    var colorList = ['red', 'orange', 'yellow', 'green', 'blue'];
+    var colorList = ['red', 'orange', 'yellow', 'green', 'blue', 'pink', 'violet'];
     var randno = Math.floor(Math.random() * colorList.length);
     return colorList[randno];
   }
@@ -84,18 +84,9 @@ $(function() {
 
     //additions
 
-    var color = ['red', 'orange', 'yellow', 'green', 'blue'];
     var prepend = ['much ', 'such ', 'wow ', 'cool ', 'moar '];
     var append = [' wow', ' !!!'];
 
-    for (var i = color.length - 1; i >= 0; i--) {
-      if ( message.text == color[i]) {
-        $('body').removeClass().addClass(color[i]);
-      }
-    }
-      
-
-    //end additions
     //adding prepend
     message.text = prepend[Math.floor(Math.random() * prepend.length)] + message.text;
 
