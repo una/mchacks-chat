@@ -50,7 +50,7 @@ $(function() {
   });
 
   function randomColor() {
-    var colorList = ['red', 'orange', 'yellow', 'green', 'blue', 'pink', 'violet'];
+    var colorList = ['red', 'orange', 'yellow', 'green', 'blue', 'pink', 'purple'];
     var randno = Math.floor(Math.random() * colorList.length);
     return colorList[randno];
   }
