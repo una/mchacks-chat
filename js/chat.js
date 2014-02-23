@@ -84,7 +84,7 @@ $(function() {
 
     //additions
 
-    var prepend = ['much ', 'such ', 'wow ', 'cool ', 'moar '];
+    var prepend = ['much ', 'such ', 'wow ', 'cool ', 'moar ', 'omg ', 'many ', 'so '];
     var append = [' wow', ' !!!'];
 
     //adding prepend
@@ -94,6 +94,17 @@ $(function() {
     if ($('.messages').children().length %3 === 0) {
       message.text += append[Math.floor(Math.random() * append.length)];
     }
+
+    //make text just say 'wow once in a while'
+    if ($('.messages').children().length %15 === 0) {
+      message.text = "wow.";
+    }
+
+    //on new sentances, prepend things still :)
+    if (message.text.indexOf(". ") != -1) {
+        message.text = message.text.replace(". ", '. ' + prepend[Math.floor(Math.random() * prepend.length)]);
+    }
+
     messagesKey.add(message);
   }
 
