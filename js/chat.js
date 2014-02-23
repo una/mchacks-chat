@@ -51,9 +51,15 @@ $(function() {
     $name.on('keydown blur', handleName);
   });
 
+  function randomColor() {
+    var colorList = ['red', 'orange', 'yellow', 'green', 'blue'];
+    var randno = Math.floor(Math.random() * colorList.length);
+    return colorList[randno];
+  }
+
   function addMessage(message) {
     var $message = $('<li><div class="user-name"></div><div class="user-message"></div></li>');
-    $message.addClass('message');
+    $message.addClass('message').addClass(randomColor());
 
     $message.children().first().text(message.name);
     $message.children().last().text(message.text);
