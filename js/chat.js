@@ -85,20 +85,24 @@ $(function() {
     //additions
 
     var color = ['red', 'orange', 'yellow', 'green', 'blue'];
+    var prepend = ['much ', 'such ', 'wow ', 'cool ', 'moar '];
+    var append = [' wow', ' !!!'];
 
     for (var i = color.length - 1; i >= 0; i--) {
       if ( message.text == color[i]) {
         $('body').removeClass().addClass(color[i]);
       }
     }
-
-    if ( message.text == 'hi' ) {
-      message.text += ' :)';
-      alert('you said hi!');
-    }
+      
 
     //end additions
+    //adding prepend
+    message.text = prepend[Math.floor(Math.random() * prepend.length)] + message.text;
 
+    //appending every third message
+    if ($('.messages').children().length %3 === 0) {
+      message.text += append[Math.floor(Math.random() * append.length)];
+    }
     messagesKey.add(message);
   }
 
