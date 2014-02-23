@@ -21,6 +21,8 @@ $(function() {
     room = result.rooms[0];
     messagesKey = room.key('messages');
 
+    // messagesKey.remove();
+
     return room.self().get();
 
   }).then(function(result) {

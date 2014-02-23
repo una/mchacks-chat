@@ -5,18 +5,27 @@
 	-moz-box-sizing: border-box;
 }
 
+%silly-font {
+	font-family: Patrick Hand, sans-serif;
+}
+
+%fs-1p2 {
+	font-size: 1.2em;
+}
+
 body {
+	@extend %silly-font;
 	position: relative;
 	height: 100%;
 	margin: 0;
 	padding: 0 0 44px;
-	font-family: Patrick Hand, sans-serif;
 	font-size: 16px;
 	background: url("../img/bg.jpg");
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 6em;
+	font-weight: 900;
 }
 
 .container {
@@ -46,15 +55,18 @@ input[type="text"] {
 
 input[type="text"]:focus {
 	outline: 0;
-	background-color: hotpink;
-	color: white;
+	background-color: yellow;
 }
 
 input.name {
+	@extend %silly-font;
+	@extend %fs-1p2;
 	width: 150px;
 	margin-right: 8px;
 }
 input.text {
+	@extend %silly-font;
+	@extend %fs-1p2;
 	width: 437px;
 }
 
@@ -85,7 +97,7 @@ input.text {
 	color: dimgrey;
 	margin-right: 16px;
 	margin-right: 1em;
-	font-size:  1.2em;
+	@extend %fs-1p2;
 }
 
 .user-name:after {
@@ -96,7 +108,7 @@ input.text {
 .user-message {
 	max-width: 100%;
 	overflow: hidden;
-	font-size: 1.2em;
+	@extend %fs-1p2;
 }
 
 .red {
@@ -106,10 +118,10 @@ input.text {
 	color: orange;
 }
 .yellow {
-	color: yellow;
+	color: #ffe100;
 }
 .green {
-	color: green;
+	color: limegreen;
 }
 .blue {
 	color: blue;
